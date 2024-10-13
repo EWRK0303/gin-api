@@ -6,13 +6,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type createparams struct {
+type Createparams struct {
 	Name  string `json:"name"`
 	Price uint   `json:"price"`
 }
 
 func Create(c *gin.Context) {
-	var params createparams //传入一个createparams结构体，定义如上
+	var params Createparams //传入一个createparams结构体，定义如上
 	if err := c.BindJSON(&params); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
