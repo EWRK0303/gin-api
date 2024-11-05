@@ -7,8 +7,9 @@ import (
 )
 
 type Createparams struct {
-	Name  string `json:"name"`
-	Price uint   `json:"price"`
+	Name   string `json:"name"`
+	Price  uint   `json:"price"`
+	Remark string `gorm:"column:Name;type:varchar(1024)" json:"remark"`
 }
 
 func Create(c *gin.Context) {
