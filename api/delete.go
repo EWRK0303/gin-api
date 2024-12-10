@@ -8,6 +8,6 @@ import (
 
 func Delete(c *gin.Context) {
 	var id = c.Param("id")
-	database.GetDB().Delete(&models.Product{}, id)
+	database.GetDB().Delete(&models.Bucket{}, id)
 	c.JSON(200, gin.H{"message": "deleted"})
 }

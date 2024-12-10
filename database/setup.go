@@ -16,7 +16,8 @@ func Setup() {
 		panic("failed to connect database")
 	}
 
-	db.AutoMigrate(&models.Product{})
+	db.AutoMigrate(&models.userinfo{})
+	db.AutoMigrate(&models.Bucket{})
 	gdb = db
 }
 
