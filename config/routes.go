@@ -20,5 +20,6 @@ func Routes(r *gin.Engine) {
 	r.POST("/deletebucket", midware.Auth(), api.Deletebucket) //删除bucket
 	r.GET("/showbucket", midware.Auth(), api.ShowBucket)      //显示当前用户所有bucket
 	r.POST("/uploadfile", midware.Auth(), api.Uploadfile)
+	r.GET("/downloadfile", midware.Auth(), api.DownloadFile)
 
 }
